@@ -76,7 +76,7 @@ export async function initializeDatabase() {
         await tempConnection.query(`CREATE DATABASE IF NOT EXISTS \`${dbName}\`;`);
         await tempConnection.query(`USE \`${dbName}\`;`);
 
-        await tempConnection.query('DROP TABLE IF EXISTS itens_pedidos;')
+        await tempConnection.query('DROP TABLE IF EXISTS itens_pedido;')
         await tempConnection.query('DROP TABLE IF EXISTS pedidos;')
         await tempConnection.query('DROP TABLE IF EXISTS produtos;')
         await tempConnection.query('DROP TABLE IF EXISTS categorias;')
