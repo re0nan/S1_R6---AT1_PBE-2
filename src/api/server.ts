@@ -1,11 +1,11 @@
 import express from 'express';
 import router from './routes/routes';
 import 'dotenv/config';
-import { initializeDatabase } from './configs/Database.js';
+import { initializeDatabase } from './configs/Database';
 import cors from 'cors';
 
 const app = express();
-const SERVER_PORT = process.env.SERVER_PORT;
+const PORT = process.env.SERVER_PORT;
 
 app.use('/uploads', express.static('uploads'));
 app.use(express.json());
